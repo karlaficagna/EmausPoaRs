@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Tcc2</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Username inválido</string>
+    <string name="invalid_password">Senha deve ter 6 números</string>
+    <string name="login_failed">"Login falhou"</string>
+    <string name="cadastro">Criar Cadastro</string>
+    <string name="login">Login</string>
+    <string name="cadastrar">Cadastre-se</string>
+    <string name="sair">Sair</string>
+    <string name="enviar">Enviar</string>
+    <string name="esqueciSenha">Esqueci Minha Senha</string>
+    <string name="error_generic">Ocorreu um erro, por favor tente novamente mais tarde.</string>
+
+    <string name="account_not_registered_register_fragment">Nenhuma conta encontrada com este e-mail.</string>
+    <string name="invalid_email_register_fragment">Insira um e-mail válido.</string>
+    <string name="invalid_password_register_fragment">Senha inválida, tente novamente.</string>
+    <string name="email_in_use_register_fragment">Este e-mail já está em uso.</string>
+    <string name="strong_password_register_fragment">Insira uma senha mais forte.</string>
+    <string name="agenda_eventos">Eventos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

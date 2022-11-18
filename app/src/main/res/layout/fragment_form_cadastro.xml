@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.auth.FormCadastroFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_escuro">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criar Cadastro"
+                android:textColor="@color/white"/>
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/te_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastrar"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:id="@+id/container_cadastro"
+        style="@style/ContainerComponents"
+        app:layout_constraintTop_toBottomOf="@id/te_cadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/et_nome"
+        style="@style/EditText"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/container_cadastro"
+        app:layout_constraintEnd_toEndOf="@id/container_cadastro"
+        app:layout_constraintTop_toTopOf="@id/container_cadastro"
+        />
+
+    <EditText
+        android:id="@+id/et_email_cadastro"
+        style="@style/EditText"
+        android:hint="e-mail"
+        android:drawableRight="@drawable/ic_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@id/container_cadastro"
+        app:layout_constraintEnd_toEndOf="@id/container_cadastro"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        />
+
+    <EditText
+        android:id="@+id/et_senha_cadastro"
+        style="@style/EditText"
+        android:hint="senha"
+        android:drawableRight="@drawable/ic_eye"
+        android:inputType="numberPassword"
+        app:layout_constraintStart_toStartOf="@id/container_cadastro"
+        app:layout_constraintEnd_toEndOf="@id/container_cadastro"
+        app:layout_constraintTop_toBottomOf="@id/et_email_cadastro"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_cadastrar"
+        style="@style/Button"
+        android:text="@string/cadastro"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_senha_cadastro"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
