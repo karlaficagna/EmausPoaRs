@@ -18,7 +18,7 @@
             android:exported="false"
             android:label="@string/title_activity_login" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".ui.activitys.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,10 +27,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MenuActivity"
+            android:name=".ui.activitys.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.activitys.MainActivity"
             android:exported="false" />
     </application>
 

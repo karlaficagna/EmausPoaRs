@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeFragment">
+    tools:context=".ui.fragments.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.activitys.MainActivity">
 
         <ImageView
             android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo"
+            android:layout_height="200dp"
+            android:src="@drawable/emaus_poa_azul"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Nossa História"
+                    android:text="@string/bt_nossa_historia"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Eventos"
+                    android:text="@string/bt_eventos"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Grupos"
+                    android:text="@string/bt_grupos"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -162,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Redes Sociais"
+                    android:text="@string/bt_redes_sociais"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -193,7 +193,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Contribua"
+                    android:text="@string/bt_contribua"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -212,7 +212,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:background="@drawable/background_button"
-                    android:drawableBottom="@drawable/ic_menu_book"
+                    android:drawableBottom="@drawable/ic_news"
                     android:padding="15dp"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -224,7 +224,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Nossa História"
+                    android:text="@string/bt_noticias"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button6" />

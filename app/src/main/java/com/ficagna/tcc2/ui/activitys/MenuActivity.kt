@@ -1,9 +1,10 @@
-package com.ficagna.tcc2
+package com.ficagna.tcc2.ui.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.ficagna.tcc2.R
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

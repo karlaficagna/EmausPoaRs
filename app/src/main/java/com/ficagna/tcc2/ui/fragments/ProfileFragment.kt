@@ -1,4 +1,4 @@
-package com.ficagna.tcc2.ui
+package com.ficagna.tcc2.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

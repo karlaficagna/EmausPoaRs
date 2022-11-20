@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.SplashActivity">
+    tools:context=".ui.activitys.SplashActivity">
 
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/logo50"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
