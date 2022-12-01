@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_homeFragment_to_historyFragment"
             app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_groupListFragment"
+            app:destination="@id/groupListFragment" />
     </fragment>
     <fragment
         android:id="@+id/formLoginFragment"
@@ -46,7 +49,11 @@
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.ficagna.tcc2.ui.HistoryFragment"
+        android:name="com.ficagna.tcc2.ui.fragments.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/groupListFragment"
+        android:name="com.ficagna.tcc2.ui.fragments.GroupListFragment"
+        android:label="GroupListFragment" />
 </navigation>
