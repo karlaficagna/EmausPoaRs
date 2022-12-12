@@ -15,13 +15,13 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:src="@drawable/logo_emaus"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/emaus_ofic_br"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="50dp"/>
 
     <View
         android:id="@+id/container_components"
@@ -34,7 +34,7 @@
         android:id="@+id/et_email"
         style="@style/EditText"
         android:hint="nome@email.com"
-        android:drawableRight="@drawable/ic_email"
+        android:drawableRight="@drawable/ic_baseline_email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@id/container_components"
         app:layout_constraintEnd_toEndOf="@id/container_components"
@@ -45,7 +45,7 @@
         android:id="@+id/et_senha"
         style="@style/EditText"
         android:hint="******"
-        android:drawableRight="@drawable/ic_eye"
+        android:drawableRight="@drawable/ic_baseline_remove_red_eye_24"
         android:inputType="numberPassword"
         app:layout_constraintStart_toStartOf="@id/container_components"
         app:layout_constraintEnd_toEndOf="@id/container_components"
@@ -79,7 +79,7 @@
         style="@style/ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:text="@string/cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

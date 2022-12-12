@@ -15,12 +15,12 @@
         <ImageView
             android:id="@+id/logo"
             android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/logo50"
+            android:layout_height="100dp"
+            android:src="@drawable/emaus_ofic_br"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            android:layout_marginTop="50dp"/>
 
         <View
             android:id="@+id/container_recover_account"
@@ -33,7 +33,7 @@
             android:id="@+id/et_email"
             style="@style/EditText"
             android:hint="email@email.com"
-            android:drawableRight="@drawable/ic_email"
+            android:drawableRight="@drawable/ic_baseline_email"
             android:inputType="textEmailAddress"
             android:layout_marginTop="25dp"
             app:layout_constraintStart_toStartOf="@id/container_recover_account"

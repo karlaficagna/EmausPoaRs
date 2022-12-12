@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azul"
-    tools:context=".ui.HistoryFragment">
+    android:background="@drawable/background"
+    tools:context=".ui.fragments.HistoryFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="8dp"
             android:text="@string/text_quem_somos1"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
             android:text="@string/text_quem_somos2"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
             android:text="@string/text_quem_somos3"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
             android:text="@string/text_quem_somos4"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

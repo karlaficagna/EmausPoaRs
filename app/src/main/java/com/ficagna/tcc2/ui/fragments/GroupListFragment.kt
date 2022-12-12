@@ -14,9 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class GroupListFragment : Fragment() {
 
-
     private lateinit var groupList: FirebaseDatabase
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,15 +23,14 @@ class GroupListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_group_list, container, false)
 
-
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
 
-        FirebaseDatabase.getInstance().getReference().child("database").child("grupos")
+        FirebaseDatabase.getInstance().reference.child("database").child("grupos")
             .get().addOnSuccessListener {
                 Log.d("teste", it.toString())
                 val groups = it.children.map { item -> item.getValue(Group::class.java) }.toList()
                 Log.d("groups", groups.toString())
-                recyclerView.adapter = GroupListAdapter(groupList = groups)
+                recyclerView.adapter = GroupListAdapter(groupList = groups, context = requireContext())
 
             }
         return view

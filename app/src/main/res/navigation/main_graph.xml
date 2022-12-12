@@ -15,6 +15,18 @@
         <action
             android:id="@+id/action_homeFragment_to_groupListFragment"
             app:destination="@id/groupListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_redesSociaisActivity"
+            app:destination="@id/redesSociaisActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_calendarActivity"
+            app:destination="@id/calendarActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_contribuaActivity"
+            app:destination="@id/contribuaActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_productFragment"
+            app:destination="@id/productFragment" />
     </fragment>
     <fragment
         android:id="@+id/formLoginFragment"
@@ -56,4 +68,23 @@
         android:id="@+id/groupListFragment"
         android:name="com.ficagna.tcc2.ui.fragments.GroupListFragment"
         android:label="GroupListFragment" />
+    <activity
+        android:id="@+id/redesSociaisActivity"
+        android:name="com.ficagna.tcc2.ui.activitys.RedesSociaisActivity"
+        android:label="activity_redes_sociais"
+        tools:layout="@layout/activity_redes_sociais" />
+    <activity
+        android:id="@+id/calendarActivity"
+        android:name="com.ficagna.tcc2.ui.activitys.CalendarActivity"
+        android:label="activity_calendar"
+        tools:layout="@layout/activity_calendar" />
+    <activity
+        android:id="@+id/contribuaActivity"
+        android:name="com.ficagna.tcc2.ui.activitys.ContribuaActivity"
+        android:label="activity_contribua"
+        tools:layout="@layout/activity_contribua" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.ficagna.tcc2.ui.fragments.ProductFragment"
+        android:label="ProductFragment" />
 </navigation>

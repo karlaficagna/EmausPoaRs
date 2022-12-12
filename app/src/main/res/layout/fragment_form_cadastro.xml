@@ -7,36 +7,29 @@
     android:background="@drawable/background"
     tools:context=".ui.auth.FormCadastroFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-
-        <Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/azul_escuro">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"/>
-        </Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/emaus_ofic_br"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"/>
 
     <TextView
         android:id="@+id/te_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cadastrar"
-        android:textSize="50dp"
+        android:textSize="25dp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+
         />
 
     <View
@@ -49,7 +42,7 @@
     <EditText
         android:id="@+id/et_nome"
         style="@style/EditText"
-        android:hint="Nome"
+        android:hint="Nome Completo"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@id/container_cadastro"
         app:layout_constraintEnd_toEndOf="@id/container_cadastro"
@@ -60,7 +53,7 @@
         android:id="@+id/et_email_cadastro"
         style="@style/EditText"
         android:hint="e-mail"
-        android:drawableRight="@drawable/ic_email"
+        android:drawableRight="@drawable/ic_baseline_email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@id/container_cadastro"
         app:layout_constraintEnd_toEndOf="@id/container_cadastro"
@@ -71,7 +64,7 @@
         android:id="@+id/et_senha_cadastro"
         style="@style/EditText"
         android:hint="senha"
-        android:drawableRight="@drawable/ic_eye"
+        android:drawableRight="@drawable/ic_baseline_remove_red_eye_24"
         android:inputType="numberPassword"
         app:layout_constraintStart_toStartOf="@id/container_cadastro"
         app:layout_constraintEnd_toEndOf="@id/container_cadastro"

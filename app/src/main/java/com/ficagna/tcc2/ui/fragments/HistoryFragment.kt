@@ -9,10 +9,6 @@ import com.ficagna.tcc2.R
 
 class HistoryFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = HistoryFragment()
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -26,6 +22,11 @@ class HistoryFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_history, container, false)
         return view
     }
+
+    companion object {
+        fun newInstance() = HistoryFragment()
+    }
+
 }
 
 
