@@ -26,15 +26,15 @@ class ProductListAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val prod = productList[position]
 
-        holder.binding.nomeProd.text = prod?.nameProd
-        holder.binding.preco.text = prod?.preco
-        holder.binding.quantidade.text = prod?.quantidade
-        holder.binding.total.text = prod?.total
+        holder.binding.nome.text = prod?.nameProd
+        holder.binding.value.text = prod?.preco
+        holder.binding.quantity.text = prod?.quantidade
+        holder.binding.totalValue.text = prod?.total
         prod?.imageProd?.let {
             val resId: Int = context.resources.getIdentifier(
                 it,
                 "drawable",
-                context.getPackageName()
+                context.packageName
             )
             holder.binding.image.setImageResource(resId) }
 

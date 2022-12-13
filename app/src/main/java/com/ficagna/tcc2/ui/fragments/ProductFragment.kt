@@ -16,7 +16,6 @@ class ProductFragment : Fragment() {
 
     private lateinit var productList: FirebaseDatabase
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,14 +23,14 @@ class ProductFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_product_list, container, false)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.listProd)
 
         FirebaseDatabase.getInstance().reference.child("database").child("loja")
             .get().addOnSuccessListener {
                 Log.d("teste", it.toString())
-                val products = it.children.map { item -> item.getValue(Product::class.java) }.toList()
-                Log.d("products", products.toString())
-                recyclerView.adapter = ProductListAdapter(productList = products, context = requireContext())
+                val prods = it.children.map { item -> item.getValue(Product::class.java) }.toList()
+                Log.d("prods", prods.toString())
+                recyclerView.adapter = ProductListAdapter(productList = prods, context = requireContext())
 
             }
         return view

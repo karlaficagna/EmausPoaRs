@@ -32,6 +32,7 @@
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/drawable/ic_user.xml" value="0.1865" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/drawable/img.xml" value="0.125" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/drawable/pig.xml" value="0.201" />
+        <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/font/fonte_futura_now.xml" value="0.18703703703703703" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/activity_calendar.xml" value="0.25" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/activity_contribua.xml" value="0.22" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/activity_form_cadastro.xml" value="0.25" />
@@ -45,7 +46,7 @@
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/activity_splash.xml" value="0.1716485507246377" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/fragment_calendar.xml" value="0.1586147926464301" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/fragment_form_cadastro.xml" value="0.16" />
-        <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/fragment_form_login.xml" value="0.18" />
+        <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/fragment_form_login.xml" value="0.25" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/fragment_group_details.xml" value="0.1" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/fragment_group_list.xml" value="0.22" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/fragment_groups.xml" value="0.33" />
@@ -66,7 +67,7 @@
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/group_list.xml" value="0.1408514492753623" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/item_groups.xml" value="0.5" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/item_list.xml" value="0.2" />
-        <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/item_product.xml" value="0.22" />
+        <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/layout/item_product.xml" value="0.33" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/menu/main_menu.xml" value="0.25" />
         <entry key="..\:/Users/admin/Desktop/Fundatec/Tcc2/app/src/main/res/menu/menu_main.xml" value="0.19322916666666667" />
         <entry key="..\:/Users/admin/Desktop/Tcc2/app/src/main/res/drawable/background.xml" value="0.16" />

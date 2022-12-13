@@ -1,13 +1,13 @@
 package com.ficagna.tcc2.ui.model
 
 data class Product (
-    val imageProd: String,
-    val nameProd: String,
-    val corProd: String,
-    val tamanho: String,
-    val preco: String,
-    val quantidade: String,
-    val total: String
+    var imageProd: String,
+    var nameProd: String,
+    var corProd: String,
+    var tamanho: String,
+    var preco: String,
+    var quantidade: String,
+    var total: String
 )
 {
     constructor() : this("","","","","","","")

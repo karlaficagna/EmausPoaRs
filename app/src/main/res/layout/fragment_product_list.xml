@@ -21,17 +21,11 @@
             app:title="Produtos"/>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/list"
-        android:name="com.ficagna.tcc2.ui.fragments.ProductFragment"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listProd"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_below="@+id/appBar"
         app:layoutManager="LinearLayoutManager"
-        tools:context=".ui.fragments.ProductFragment"
         tools:listitem="@layout/item_product" />
-
 </RelativeLayout>

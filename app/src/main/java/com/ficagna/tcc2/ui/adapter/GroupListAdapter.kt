@@ -36,7 +36,7 @@ class GroupListAdapter(
             val resId: Int = context.resources.getIdentifier(
                 it,
                 "drawable",
-                context.getPackageName()
+                context.packageName
             )
             holder.binding.logoGroup.setImageResource(resId) }
     }
