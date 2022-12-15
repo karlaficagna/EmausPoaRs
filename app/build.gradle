@@ -39,6 +39,7 @@ android {
         dataBinding true
     }
     buildToolsVersion '30.0.3'
+    namespace 'com.ficagna.tcc2'
 }
 
 dependencies {

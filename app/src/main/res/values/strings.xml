@@ -36,4 +36,9 @@
     <string name="text_quem_somos3">Emaús é um movimento católico e tem como inspiração a dinâmica espiritual da narrativa do Evangelista Lucas (24, 13-35) sobre a aparição de Cristo aos discípulos.</string>
     <string name="text_quem_somos4">O carisma do Movimento é a evangelização do jovem pelo jovem. Sua missão está no exemplo de seu padroeiro, São João Batista. Cada membro do Emaús é chamado a preparar os caminhos do Senhor, anunciando um Cristo vivo e presente no meio de nós.</string>
     <string name="nossa_historia">Nossa História</string>
+    <string name="titulo_tarefa">Título</string>
+    <string name="data_evento">Data</string>
+    <string name="hora_evento">Hora</string>
+    <string name="local_evento">Local</string>
+    <string name="save">Save</string>
 </resources>

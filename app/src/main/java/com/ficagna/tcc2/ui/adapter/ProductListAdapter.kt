@@ -28,8 +28,8 @@ class ProductListAdapter(
 
         holder.binding.nome.text = prod?.nameProd
         holder.binding.value.text = prod?.preco
-        holder.binding.quantity.text = prod?.quantidade
-        holder.binding.totalValue.text = prod?.total
+//        holder.binding.quantity.text = prod?.quantidade
+//        holder.binding.totalValue.text = prod?.total
         prod?.imageProd?.let {
             val resId: Int = context.resources.getIdentifier(
                 it,

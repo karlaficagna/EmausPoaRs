@@ -6,6 +6,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         android:layout_margin="4dp"
         app:cardCornerRadius="7dp"
         app:cardElevation="10dp">
@@ -19,7 +20,7 @@
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="350dp"
                 android:padding="5dp"
                 android:src="@drawable/camisetas50"/>
 
@@ -27,6 +28,7 @@
                 android:id="@+id/nome"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:textColor="@color/azul"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -35,93 +37,96 @@
                 android:id="@+id/value"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:textColor="@color/azul"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/quantity"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/azul"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/totalValue"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/azul"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-<!--            <RadioGroup-->
-<!--                android:id="@+id/rd_cor"-->
+<!--            <TextView-->
+<!--                android:id="@+id/quantity"-->
 <!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/totalValue">-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/azul"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
 
-<!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="branca" />-->
-
-<!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="preta" />-->
-
-<!--            </RadioGroup>-->
-
-<!--            <RadioGroup-->
-<!--                android:id="@+id/rd_tamanho"-->
+<!--            <TextView-->
+<!--                android:id="@+id/totalValue"-->
 <!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/cor">-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/azul"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold" />-->
 
-<!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="PP" />-->
+            <!--            <RadioGroup-->
+            <!--                android:id="@+id/rd_cor"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/totalValue">-->
 
-<!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="P" />-->
+            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="branca" />-->
 
-<!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="M" />-->
+            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="preta" />-->
 
-<!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="G" />-->
+            <!--            </RadioGroup>-->
 
-<!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="GG" />-->
+            <!--            <RadioGroup-->
+            <!--                android:id="@+id/rd_tamanho"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/cor">-->
 
-<!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="XG" />-->
+            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="PP" />-->
 
-<!--            </RadioGroup>-->
+            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="P" />-->
+
+            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="M" />-->
+
+            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="G" />-->
+
+            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="GG" />-->
+
+            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="XG" />-->
+
+            <!--            </RadioGroup>-->
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </layout>
