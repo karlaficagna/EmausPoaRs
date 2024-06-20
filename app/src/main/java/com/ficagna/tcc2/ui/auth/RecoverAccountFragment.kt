@@ -56,7 +56,11 @@ class RecoverAccountFragment : BaseFragment() {
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(requireContext(),"Verifique seu e-mail, acabamos de enviar um link para redefinição de senha",  Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Verifique seu e-mail, acabamos de enviar um link para redefinição de senha",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
                 } else {
                     Toast.makeText(

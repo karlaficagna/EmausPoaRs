@@ -22,13 +22,13 @@ class CalendarActivity : AppCompatActivity() {
 
         calendarView = findViewById(R.id.calendarView)
         dateDisplay = findViewById(R.id.dateDisplay)
-        dateDisplay!!.text = "Date: "
-        calendarView!!.setOnDateChangeListener { calendar, i, i1, i2 ->
-            dateDisplay!!.text = "Date: $i2 / $i1 / $i"
+        dateDisplay.text = "Date: "
+        calendarView.setOnDateChangeListener { calendar, i, i1, i2 ->
+            dateDisplay.text = "Date: $i2 / $i1 / $i"
 
         }
 
-        binding.btAdicionar.setOnClickListener{
+        binding.btAdicionar.setOnClickListener {
             val intent = Intent(this, FormCalendarActivity::class.java)
             startActivity(intent)
         }

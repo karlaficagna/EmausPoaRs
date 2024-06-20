@@ -1,24 +1,10 @@
 package com.ficagna.tcc2.ui.activitys
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.navigation.fragment.findNavController
-import com.ficagna.tcc2.R
+import androidx.appcompat.app.AppCompatActivity
 import com.ficagna.tcc2.databinding.ActivityFormCalendarBinding
-import com.ficagna.tcc2.databinding.FragmentFormCadastroBinding
-import com.ficagna.tcc2.helper.FirebaseHelper
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.app
 
 @Suppress("UNREACHABLE_CODE")
 class FormCalendarActivity : AppCompatActivity() {
@@ -49,8 +35,6 @@ class FormCalendarActivity : AppCompatActivity() {
         }
     }
 }
-
-
 
 
 //    private fun saveData() {

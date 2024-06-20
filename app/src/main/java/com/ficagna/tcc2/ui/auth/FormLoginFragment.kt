@@ -29,7 +29,7 @@ class FormLoginFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentFormLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -45,10 +45,12 @@ class FormLoginFragment : Fragment() {
     private fun initClicks() {
 
         binding.btLogin.setOnClickListener { validateData(); it.hideKeyboard() }
-        binding.cadastro.setOnClickListener {it.hideKeyboard();
+        binding.cadastro.setOnClickListener {
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_formLoginFragment_to_formCadastroFragment)
         }
-        binding.esqueciSenha.setOnClickListener {it.hideKeyboard();
+        binding.esqueciSenha.setOnClickListener {
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_formLoginFragment_to_recoverAccountFragment)
         }
     }
@@ -81,7 +83,7 @@ class FormLoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    findNavController().navigate(R.id.action_formLoginFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_formLoginFragment_to_mainActivity2)
                 } else {
                     Toast.makeText(
                         requireContext(), FirebaseHelper.validError(task.exception?.message ?: ""),

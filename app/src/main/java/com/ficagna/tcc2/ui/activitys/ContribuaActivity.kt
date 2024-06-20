@@ -2,9 +2,8 @@ package com.ficagna.tcc2.ui.activitys
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ficagna.tcc2.R
+import androidx.appcompat.app.AppCompatActivity
 import com.ficagna.tcc2.databinding.ActivityContribuaBinding
 
 class ContribuaActivity : AppCompatActivity() {

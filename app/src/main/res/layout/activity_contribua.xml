@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:layout_marginLeft="8dp"
-        android:text=" pix para o cnpj: 32.242.739/0001-04"
+        android:text=" pix para o email: emauspoars@gmail.com"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

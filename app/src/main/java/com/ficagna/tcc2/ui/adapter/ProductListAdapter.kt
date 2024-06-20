@@ -18,7 +18,7 @@ class ProductListAdapter(
         return ViewHolder(
             ItemProductBinding.inflate(
                 LayoutInflater.from(parent.context),
-                parent,false
+                parent, false
             )
         )
     }
@@ -36,14 +36,13 @@ class ProductListAdapter(
                 "drawable",
                 context.packageName
             )
-            holder.binding.image.setImageResource(resId) }
+            holder.binding.image.setImageResource(resId)
+        }
 
     }
 
     override fun getItemCount(): Int = productList.size
 
     inner class ViewHolder(val binding: ItemProductBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-    }
+        RecyclerView.ViewHolder(binding.root)
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tcc2</string>
+    <string name="app_name">EmausPoA/RS</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Senha</string>
@@ -24,7 +24,7 @@
     <string name="strong_password_register_fragment">Insira uma senha mais forte.</string>
     <string name="agenda_eventos">Eventos</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="noticias_fragment">Notícias</string>
     <string name="bt_loja">Loja Emaús</string>
     <string name="bt_contribua">Contribua</string>
     <string name="bt_redes_sociais">Redes Sociais</string>
@@ -41,4 +41,10 @@
     <string name="hora_evento">Hora</string>
     <string name="local_evento">Local</string>
     <string name="save">Save</string>
+    <string name="Mt_18">Porque, onde estiverem dois ou três reunidos em meu nome, aí estou eu no meio deles.</string>
+    <string name="Mt_18_20">Mt 18,20</string>
+    <string name="Home">Home</string>
+    <string name="Perfil">Perfil</string>
+    <string name="Noticias">Noticias</string>
+    <string name="Eventos">Eventos</string>
 </resources>

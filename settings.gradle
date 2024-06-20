@@ -3,7 +3,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-                {url = uri("https://repository.jboss.org/maven2")}
+                { url = uri("https://repository.jboss.org/maven2") }
 
     }
 }

@@ -1,6 +1,6 @@
 package com.ficagna.tcc2.ui.model
 
-data class Group (
+data class Group(
     var nameGroup: String,
     var nameCoordenador: String,
     var localReuniao: String,
@@ -9,5 +9,5 @@ data class Group (
     val img: String
 ) {
 
-    constructor() : this("","","","","", "")
+    constructor() : this("", "", "", "", "", "")
 }

@@ -1,6 +1,6 @@
 package com.ficagna.tcc2.ui.model
 
-data class Product (
+data class Product(
     var imageProd: String,
     var nameProd: String,
     var corProd: String,
@@ -8,7 +8,6 @@ data class Product (
     var preco: String,
     var quantidade: String,
     var total: String
-)
-{
-    constructor() : this("","","","","","","")
+) {
+    constructor() : this("", "", "", "", "", "", "")
 }
