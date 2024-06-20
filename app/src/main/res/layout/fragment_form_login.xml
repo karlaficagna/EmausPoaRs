@@ -10,8 +10,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    >
+    android:background="@drawable/background" >
 
     <ImageView
         android:id="@+id/logo"
@@ -21,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="10dp"/>
 
     <View
         android:id="@+id/container_components"
@@ -38,8 +37,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@id/container_components"
         app:layout_constraintEnd_toEndOf="@id/container_components"
-        app:layout_constraintTop_toTopOf="@id/container_components"
-        />
+        app:layout_constraintTop_toTopOf="@id/container_components" />
 
     <EditText
         android:id="@+id/et_senha"
@@ -49,8 +47,7 @@
         android:inputType="numberPassword"
         app:layout_constraintStart_toStartOf="@id/container_components"
         app:layout_constraintEnd_toEndOf="@id/container_components"
-        app:layout_constraintTop_toBottomOf="@id/et_email"
-        />
+        app:layout_constraintTop_toBottomOf="@id/et_email" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_login"
@@ -58,8 +55,7 @@
         android:text="@string/login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_senha"
-        />
+        app:layout_constraintTop_toBottomOf="@id/et_senha" />
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -71,16 +67,16 @@
         tools:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_components"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/container_components" />
 
     <TextView
         android:id="@+id/cadastro"
         style="@style/ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:text="@string/cadastro"
+        android:textColor="@color/black"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -91,13 +87,23 @@
         style="@style/ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/esqueciSenha"
+        android:textColor="@color/black"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cadastro" />
+
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/esqueci_senha"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

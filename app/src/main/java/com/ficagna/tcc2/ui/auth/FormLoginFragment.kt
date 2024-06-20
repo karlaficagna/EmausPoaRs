@@ -14,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.ficagna.tcc2.R
 import com.ficagna.tcc2.databinding.FragmentFormLoginBinding
 import com.ficagna.tcc2.helper.FirebaseHelper
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -22,6 +23,8 @@ class FormLoginFragment : Fragment() {
 
     private var _binding: FragmentFormLoginBinding? = null
     private val binding get() = _binding!!
+    private lateinit var googleSignInClient: GoogleSignInAccount
+
 
     private lateinit var auth: FirebaseAuth
 
@@ -29,7 +32,7 @@ class FormLoginFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentFormLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -45,10 +48,12 @@ class FormLoginFragment : Fragment() {
     private fun initClicks() {
 
         binding.btLogin.setOnClickListener { validateData(); it.hideKeyboard() }
-        binding.cadastro.setOnClickListener {it.hideKeyboard();
+        binding.cadastro.setOnClickListener {
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_formLoginFragment_to_formCadastroFragment)
         }
-        binding.esqueciSenha.setOnClickListener {it.hideKeyboard();
+        binding.esqueciSenha.setOnClickListener {
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_formLoginFragment_to_recoverAccountFragment)
         }
     }
@@ -81,7 +86,7 @@ class FormLoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    findNavController().navigate(R.id.action_formLoginFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_formLoginFragment_to_main2Activity2)
                 } else {
                     Toast.makeText(
                         requireContext(), FirebaseHelper.validError(task.exception?.message ?: ""),

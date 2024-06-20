@@ -1,4 +1,4 @@
-package com.ficagna.tcc2.ui.fragments
+package com.ficagna.tcc2.ui.activitys.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,12 +23,13 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -37,6 +38,7 @@ class ProfileFragment : Fragment() {
 
         initClicks()
     }
+
     private fun initClicks() {
         binding.btSair.setOnClickListener { logoutApp() }
     }

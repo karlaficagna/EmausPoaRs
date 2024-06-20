@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
     android:padding="32dp"
-    android:background="@drawable/background"
     tools:context=".ui.activitys.RedesSociaisActivity">
 
 
@@ -30,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@emauspoa"
+            android:text="@string/emauspoa"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -54,14 +53,14 @@
             android:layout_height="60dp"
             android:background="@drawable/img"
             app:srcCompat="@drawable/face"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/bt_facebook1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@EmausPortoAlegre"
+            android:text="@string/emausportoalegre"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -85,14 +84,14 @@
             android:layout_height="60dp"
             android:background="@drawable/img"
             app:srcCompat="@drawable/youtube"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/bt_youtube1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="emauspoa"
+            android:text="@string/youtube_emauspoa"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -115,7 +114,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             app:srcCompat="@drawable/emaus_poa_azul"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/bt_homepage1"

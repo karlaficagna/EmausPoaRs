@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Tcc2</string>
+    <string name="app_name">EmausPoA/RS</string>
+    <!--    Login-->
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Senha</string>
@@ -16,29 +17,71 @@
     <string name="enviar">Enviar</string>
     <string name="esqueciSenha">Esqueci Minha Senha</string>
     <string name="error_generic">Ocorreu um erro, por favor tente novamente mais tarde.</string>
-
     <string name="account_not_registered_register_fragment">Nenhuma conta encontrada com este e-mail.</string>
     <string name="invalid_email_register_fragment">Insira um e-mail válido.</string>
     <string name="invalid_password_register_fragment">Senha inválida, tente novamente.</string>
     <string name="email_in_use_register_fragment">Este e-mail já está em uso.</string>
     <string name="strong_password_register_fragment">Insira uma senha mais forte.</string>
+
+    <!--fragments-->
     <string name="agenda_eventos">Eventos</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="noticias_fragment">Notícias</string>
+
+<!--redes sociais-->
+    <string name="Instagram">emauspoa</string>
+    <string name="facebook">EmausPortoAlegre</string>
+    <string name="youtube">Youtube</string>
+    <string name="homepage">Homepage</string>
+
+    <!--bottom navigation-->
+    <string name="Home">Home</string>
+    <string name="Perfil">Perfil</string>
+    <string name="Noticias">Noticias</string>
+    <string name="Eventos">Eventos</string>
+
+    <!--botoes-->
     <string name="bt_loja">Loja Emaús</string>
     <string name="bt_contribua">Contribua</string>
     <string name="bt_redes_sociais">Redes Sociais</string>
     <string name="bt_grupos">Grupos</string>
     <string name="bt_eventos">Eventos</string>
     <string name="bt_nossa_historia">Nossa História</string>
+
+    <!--texto nossa historia-->
     <string name="text_quem_somos1">O Movimento de Emaús foi fundado pelo Arcebispo de São Paulo, Dom Agnelo Rossi, na festa do Espírito Santo, em 02 de junho de 1968. Em 1973, a pedido de Dom Vicente Scherer, o movimento foi trazido para Porto Alegre.</string>
     <string name="text_quem_somos2">Sua sede em Porto Alegre encontra-se na Igreja Nossa Senhora do Líbano (Paróquia Maronita), na Av. Jerônimo de Ornelas, 60. Seu Diretor Espiritual é o Monsenhor Urbano Zilles.</string>
     <string name="text_quem_somos3">Emaús é um movimento católico e tem como inspiração a dinâmica espiritual da narrativa do Evangelista Lucas (24, 13-35) sobre a aparição de Cristo aos discípulos.</string>
     <string name="text_quem_somos4">O carisma do Movimento é a evangelização do jovem pelo jovem. Sua missão está no exemplo de seu padroeiro, São João Batista. Cada membro do Emaús é chamado a preparar os caminhos do Senhor, anunciando um Cristo vivo e presente no meio de nós.</string>
     <string name="nossa_historia">Nossa História</string>
+
+    <!--EVENTOS-->
     <string name="titulo_tarefa">Título</string>
     <string name="data_evento">Data</string>
     <string name="hora_evento">Hora</string>
     <string name="local_evento">Local</string>
     <string name="save">Save</string>
+    <string name="Mt_18">Porque, onde estiverem dois ou três reunidos em meu nome, aí estou eu no meio deles.</string>
+    <string name="Mt_18_20">Mt 18,20</string>
+    <string name="emausportoalegre">EmausPortoAlegre</string>
+    <string name="emauspoa">emauspoa</string>
+    <string name="bt_sair">Sair</string>
+    <string name="notificacoes">Notificações</string>
+    <string name="informacoes_pessoais">Informações Pessoais</string>
+    <string name="minhas_oracoes_favoritas">Minhas Orações Favoritas</string>
+    <string name="insira_o_titulo">insira o título</string>
+    <string name="local_do_evento">Local</string>
+    <string name="insira_o_endere_o_do_evento">insira o endereço do evento</string>
+    <string name="descricao_do_evento">Descrição</string>
+    <string name="insira_a_descricao">insira do que se trata</string>
+    <string name="data_do_evento">Data</string>
+    <string name="insira_a_data">insira a data</string>
+    <string name="Add">Adiciona</string>
+    <string name="cancel">Cancelar</string>
+    <string name="titulo">Título</string>
+    <string name="data">Data</string>
+    <string name="visualizar_evento">Visualizar Eventos</string>
+    <string name="deletar">Excluir</string>
+    <string name="editar">Editar</string>
+    <string name="youtube_emauspoa">emauspoa</string>
+
 </resources>

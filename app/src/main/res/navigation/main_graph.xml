@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
     app:startDestination="@id/formLoginFragment">
-    <fragment
+
+      <fragment
         android:id="@+id/homeFragment"
-        android:name="com.ficagna.tcc2.ui.fragments.HomeFragment"
+        android:name="com.ficagna.tcc2.ui.activitys.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -31,7 +32,8 @@
     <fragment
         android:id="@+id/formLoginFragment"
         android:name="com.ficagna.tcc2.ui.auth.FormLoginFragment"
-        android:label="FormLoginFragment" >
+        android:label="fragment_form_login"
+        tools:layout="@layout/fragment_form_login">
         <action
             android:id="@+id/action_formLoginFragment_to_formCadastroFragment"
             app:destination="@id/formCadastroFragment" />
@@ -39,8 +41,8 @@
             android:id="@+id/action_formLoginFragment_to_recoverAccountFragment"
             app:destination="@id/recoverAccountFragment" />
         <action
-            android:id="@+id/action_formLoginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_formLoginFragment_to_main2Activity2"
+            app:destination="@id/main2Activity" />
     </fragment>
     <fragment
         android:id="@+id/formCadastroFragment"
@@ -54,20 +56,65 @@
     <fragment
         android:id="@+id/recoverAccountFragment"
         android:name="com.ficagna.tcc2.ui.auth.RecoverAccountFragment"
-        android:label="RecoverAccountFragment" >
+        android:label="fragment_recover_accoun"
+        tools:layout="@layout/fragment_recover_account">
         <action
             android:id="@+id/action_recoverAccountFragment_to_formLoginFragment"
             app:destination="@id/formLoginFragment" />
     </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/formCalendarFragment"-->
+<!--        android:name="com.ficagna.tcc2.ui.fragments.FormCalendarFragment"-->
+<!--        android:label="fragment_form_calendar"-->
+<!--        tools:layout="@layout/fragment_form_calendar" />-->
+<!--    <action-->
+<!--        android:id="@+id/action_formCalendarFragment_to_calendarActivity"-->
+<!--        app:destination="@id/calendarActivity" />-->
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.ficagna.tcc2.ui.fragments.HistoryFragment"
+        android:name="com.ficagna.tcc2.ui.activitys.fragments.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/groupListFragment"
-        android:name="com.ficagna.tcc2.ui.fragments.GroupListFragment"
-        android:label="GroupListFragment" />
+        android:name="com.ficagna.tcc2.ui.activitys.fragments.GroupListFragment"
+        android:label="fragment_group_list"
+        tools:layout="@layout/fragment_group_list"/>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.ficagna.tcc2.ui.activitys.fragments.ProductFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list"/>
+    <fragment
+        android:id="@+id/item_noticias"
+        android:name="com.ficagna.tcc2.ui.activitys.fragments.NoticiasFragment"
+        android:label="fragment_noticias"
+        tools:layout="@layout/fragment_noticias"/>
+    <!--    <fragment-->
+    <!--        android:id="@+id/item_eventos"-->
+    <!--        android:name="com.ficagna.tcc2.ui.fragments.AtividadesFragment"-->
+    <!--        android:label="fragment_atividades_list"-->
+    <!--        tools:layout="@layout/fragment_atividades_list"/>-->
+    <fragment
+        android:id="@+id/item_perfil"
+        android:name="com.ficagna.tcc2.ui.activitys.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/item_home"
+        android:name="com.ficagna.tcc2.ui.activitys.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_item_home_to_item_noticias"
+            app:destination="@id/item_noticias" />
+        <action
+            android:id="@+id/action_item_home_to_item_eventos"
+            app:destination="@id/item_eventos" />
+        <action
+            android:id="@+id/action_item_home_to_item_perfil"
+            app:destination="@id/item_perfil" />
+    </fragment>
     <activity
         android:id="@+id/redesSociaisActivity"
         android:name="com.ficagna.tcc2.ui.activitys.RedesSociaisActivity"
@@ -78,13 +125,19 @@
         android:name="com.ficagna.tcc2.ui.activitys.CalendarActivity"
         android:label="activity_calendar"
         tools:layout="@layout/activity_calendar" />
+<!--    <action-->
+<!--        android:id="@+id/action_calendarActivity_to_formCalendarFragment"-->
+<!--        app:destination="@id/formCalendarFragment" />-->
     <activity
         android:id="@+id/contribuaActivity"
         android:name="com.ficagna.tcc2.ui.activitys.ContribuaActivity"
         android:label="activity_contribua"
         tools:layout="@layout/activity_contribua" />
-    <fragment
-        android:id="@+id/productFragment"
-        android:name="com.ficagna.tcc2.ui.fragments.ProductFragment"
-        android:label="ProductFragment" />
+    <activity
+        android:id="@+id/main2Activity"
+        android:name="com.ficagna.tcc2.ui.activitys.Main2Activity"
+        android:label="activity_main2"
+        tools:layout="@layout/activity_main2" />
+
+
 </navigation>

@@ -3,7 +3,6 @@ package com.ficagna.tcc2.ui.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.ficagna.tcc2.databinding.ItemListBinding
 import com.ficagna.tcc2.ui.model.Group
@@ -38,7 +37,8 @@ class GroupListAdapter(
                 "drawable",
                 context.packageName
             )
-            holder.binding.logoGroup.setImageResource(resId) }
+            holder.binding.logoGroup.setImageResource(resId)
+        }
     }
 
     override fun getItemCount(): Int = groupList.size

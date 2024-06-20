@@ -1,107 +1,90 @@
 package com.ficagna.tcc2.ui.activitys
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.navigation.fragment.findNavController
-import com.ficagna.tcc2.R
+import androidx.appcompat.app.AppCompatActivity
 import com.ficagna.tcc2.databinding.ActivityFormCalendarBinding
-import com.ficagna.tcc2.databinding.FragmentFormCadastroBinding
-import com.ficagna.tcc2.helper.FirebaseHelper
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.ktx.database
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.app
+import com.google.firebase.database.FirebaseDatabase
 
-@Suppress("UNREACHABLE_CODE")
+
 class FormCalendarActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityFormCalendarBinding
-    private val saveDb = FirebaseFirestore.getInstance()
+    private lateinit var database: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFormCalendarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        database = FirebaseDatabase.getInstance()
 
         binding.btSave.setOnClickListener {
-            val eventosMap = hashMapOf(
-                "titulo" to "Maranatha de Natal",
-                "data" to "11/12/22",
-                "hora" to "19:30",
-                "local" to "Maronta"
-            )
-
-            saveDb.collection("Eventos").document("Marantha ed Natal")
-                .set(eventosMap).addOnCompleteListener {
-                    Log.d("saveDb", "Evento cadastrado com sucesso!")
-                }.addOnFailureListener { }
-
+            saveData()
         }
+    }
+
+    private fun saveData() {
+        val titulo = binding.etTitulo.text.toString().trim()
+        val data = binding.etData.text.toString().trim()
+        val hora = binding.etHora.text.toString().trim()
+        val local = binding.etLocal.text.toString().trim()
+
+        if (titulo.isNotEmpty() && data.isNotEmpty() && hora.isNotEmpty() && local.isNotEmpty()) {
+            salvarAtividade(titulo, data, hora, local)
+        } else {
+            when {
+                titulo.isEmpty() -> showToast("Informe o título da sua atividade")
+                data.isEmpty() -> showToast("Informe a data da sua atividade")
+                hora.isEmpty() -> showToast("Informe a hora da sua atividade")
+            }
+        }
+    }
+
+    private fun salvarAtividade(titulo: String, data: String, hora: String, local: String) {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+
+        val eventId = database.reference.child("atividades").child(userId).child("eventId").push().key ?: ""
+
+        val atividade = hashMapOf(
+            "userId" to userId,
+            "titulo" to titulo,
+            "data" to data,
+            "hora" to hora,
+            "local" to local,
+        )
+
+        // Save event to Firebase Database
+        database.reference.child("atividades").child(eventId).setValue(atividade)
+            .addOnSuccessListener {
+                Toast.makeText(
+                    this,
+                    "Atividade salva com sucesso",
+                    Toast.LENGTH_SHORT
+                ).show()
+                binding.etTitulo.text.clear()
+                binding.etData.text.clear()
+                binding.etHora.text.clear()
+                binding.etLocal.text.clear()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(
+                    this,
+                    "Erro ao salvar atividade: ${e.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(
+            this,
+            message,
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }
 
 
 
 
-//    private fun saveData() {
-//        val titulo = binding.etTitulo.text.toString().trim()
-//        val data = binding.etData.text.toString().trim()
-//        val hora = binding.etHora.text.toString().trim()
-//        val local = binding.etLocal.text.toString().trim()
-//
-//        if (titulo.isNotEmpty()) {
-//            if (data.isNotEmpty()) {
-//                if (hora.isNotEmpty()) {
-//
-//                    salvarEvento(titulo, data, hora)
-//
-//                } else {
-//                    Toast.makeText(
-//                        requireContext(),
-//                        "Informe o título do seu evemto",
-//                        Toast.LENGTH_SHORT
-//                    )
-//                        .show()
-//                }
-//            } else {
-//                Toast.makeText(requireContext(), "Informe a data do seu evemto", Toast.LENGTH_SHORT)
-//                    .show()
-//            }
-//        } else {
-//            Toast.makeText(requireContext(), "Informe a hora do seu evemto", Toast.LENGTH_SHORT)
-//                .show()
-//        }
-//    }
-//
-//    private fun salvarEvento(titulo: String, data: String, hora: String) {
-//        save.currentUser(titulo, data, hora)
-//            .addOnCompleteListener(requireActivity()) { task ->
-//                if (task.isSuccessful) {
-//                    findNavController().navigate(R.id.action_formCadastroFragment_to_formLoginFragment)
-//                } else {
-//                    Toast.makeText(
-//                        requireContext(),
-//                        FirebaseHelper.validError(task.exception?.message ?: ""),
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//                }
-//            }
-//    }
-//
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//
-//    }
-//}
-//}

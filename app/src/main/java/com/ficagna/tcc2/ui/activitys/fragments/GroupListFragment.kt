@@ -1,4 +1,4 @@
-package com.ficagna.tcc2.ui.fragments
+package com.ficagna.tcc2.ui.activitys.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -30,7 +30,8 @@ class GroupListFragment : Fragment() {
                 Log.d("teste", it.toString())
                 val groups = it.children.map { item -> item.getValue(Group::class.java) }.toList()
                 Log.d("groups", groups.toString())
-                recyclerView.adapter = GroupListAdapter(groupList = groups, context = requireContext())
+                recyclerView.adapter =
+                    GroupListAdapter(groupList = groups, context = requireContext())
 
             }
         return view

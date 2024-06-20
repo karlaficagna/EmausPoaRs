@@ -1,4 +1,4 @@
-package com.ficagna.tcc2.ui.fragments
+package com.ficagna.tcc2.ui.activitys.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -20,37 +20,39 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     private fun initClicks() {
         binding.button1.setOnClickListener {
-            it.hideKeyboard();
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_homeFragment_to_historyFragment)
         }
         binding.button2.setOnClickListener {
-            it.hideKeyboard();
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_homeFragment_to_calendarActivity)
         }
         binding.button3.setOnClickListener {
-            it.hideKeyboard();
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_homeFragment_to_groupListFragment)
         }
         binding.button4.setOnClickListener {
-            it.hideKeyboard();
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_homeFragment_to_redesSociaisActivity)
         }
         binding.button5.setOnClickListener {
-            it.hideKeyboard();
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_homeFragment_to_contribuaActivity)
         }
         binding.button6.setOnClickListener {
-            it.hideKeyboard();
+            it.hideKeyboard()
             findNavController().navigate(R.id.action_homeFragment_to_productFragment)
         }
+
     }
 
     fun View.hideKeyboard() {
@@ -63,9 +65,8 @@ class HomeFragment : Fragment() {
         initClicks()
 
 
-
-            }
     }
+}
 
 
 

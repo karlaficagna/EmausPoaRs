@@ -26,7 +26,7 @@ class FormCadastroFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentFormCadastroBinding.inflate(inflater, container, false)
         return binding.root

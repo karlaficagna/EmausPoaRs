@@ -85,7 +85,15 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="EntryPointsManager">
+    <pattern value="com.ficagna.tcc2.ui.auth.FormCadastroFragment" method="cadastrarUser" />
+    <pattern value="com.ficagna.tcc2.ui.adapter.EventosListAdapter" />
+    <pattern value="com.ficagna.tcc2.ui.adapter.EventosListAdapter" method="EventosListAdapter" />
+    <pattern value="com.ficagna.tcc2.ui.auth.FormCadastroFragment" />
+    <pattern value="com.ficagna.tcc2.ui.adapter.NoticiasListAdapter" />
+    <pattern value="com.ficagna.tcc2.ui.adapter.NoticiasListAdapter" method="NoticiasListAdapter" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
@@ -94,7 +102,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.1" />
+        <option name="scale" value="0.6071055381400209" />
       </ProjectState>
     </option>
   </component>

@@ -1,9 +1,9 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
+        gradlePluginPortal()
         mavenCentral()
-                {url = uri("https://repository.jboss.org/maven2")}
+                { url = uri("https://repository.jboss.org/maven2") }
 
     }
 }

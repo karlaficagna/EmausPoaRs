@@ -1,4 +1,4 @@
-package com.ficagna.tcc2.ui.fragments
+package com.ficagna.tcc2.ui.activitys.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -30,7 +30,8 @@ class ProductFragment : Fragment() {
                 Log.d("teste", it.toString())
                 val prods = it.children.map { item -> item.getValue(Product::class.java) }.toList()
                 Log.d("prods", prods.toString())
-                recyclerView.adapter = ProductListAdapter(productList = prods, context = requireContext())
+                recyclerView.adapter =
+                    ProductListAdapter(productList = prods, context = requireContext())
 
             }
         return view
