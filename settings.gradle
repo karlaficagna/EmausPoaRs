@@ -14,5 +14,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Tcc2"
+rootProject.name = "EmauPoaRs"
 include ':app'

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,23 +22,21 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/img"
-            app:srcCompat="@drawable/insta"
-            tools:ignore="MissingConstraints" />
+            app:srcCompat="@drawable/insta" />
 
         <TextView
             android:id="@+id/bt_instagram1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/emauspoa"
+            android:text="emauspoa"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bt_instagram"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -52,23 +51,21 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/img"
-            app:srcCompat="@drawable/face"
-            tools:ignore="MissingConstraints" />
+            app:srcCompat="@drawable/face" />
 
         <TextView
             android:id="@+id/bt_facebook1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/emausportoalegre"
+            android:text="emausportoalegre"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bt_facebook"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -83,8 +80,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/img"
-            app:srcCompat="@drawable/youtube"
-            tools:ignore="MissingConstraints" />
+            app:srcCompat="@drawable/youtube" />
 
         <TextView
             android:id="@+id/bt_youtube1"
@@ -98,8 +94,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bt_youtube"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -113,8 +108,7 @@
             android:id="@+id/bt_homepage"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            app:srcCompat="@drawable/emaus_poa_azul"
-            tools:ignore="MissingConstraints" />
+            app:srcCompat="@drawable/emaus_poa_azul" />
 
         <TextView
             android:id="@+id/bt_homepage1"
@@ -129,8 +123,7 @@
             app:layout_constraintBottom_toTopOf="@+id/bt_homepage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bt_homepage"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.ficagna.tcc2" />
-                  <option name="mobileSdkAppId" value="1:344721284634:android:c405560e7972ea86973ba3" />
-                  <option name="projectId" value="app-emaus-dc50f" />
-                  <option name="projectNumber" value="344721284634" />
+                  <option name="appId" value="com.ficagna.emausPoaRs" />
+                  <option name="mobileSdkAppId" value="1:476072531837:android:845085ca3f0a0a68411e14" />
+                  <option name="projectId" value="emauspoars-5e369" />
+                  <option name="projectNumber" value="476072531837" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

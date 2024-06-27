@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
+
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,16 +15,16 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".ui.activitys.ContribuaActivity"
+            android:name="com.ficagna.emausPoaRs.ui.activitys.ContribuaActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activitys.CalendarActivity"
+            android:name="com.ficagna.emausPoaRs.ui.activitys.CalendarActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activitys.FormCalendarActivity"
+            android:name="com.ficagna.emausPoaRs.ui.activitys.FormCalendarActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activitys.RedesSociaisActivity"
+            android:name="com.ficagna.emausPoaRs.ui.activitys.RedesSociaisActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -40,11 +41,11 @@
                 <data android:scheme="http"/>
                 <data android:host="www.emauspoa.com.br"/>
                 <data android:scheme="https"/>
-                <data tools:ignore="AppLinkUrlError" />
+
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activitys.SplashActivity"
+            android:name="com.ficagna.emausPoaRs.ui.activitys.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,10 +54,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activitys.Main2Activity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.activitys.MainActivity"
+            android:name="com.ficagna.emausPoaRs.ui.activitys.MainActivity"
             android:exported="false" />
     </application>
 

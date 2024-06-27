@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "344721284634",
-    "project_id": "app-emaus-dc50f",
-    "storage_bucket": "app-emaus-dc50f.appspot.com"
+    "project_number": "476072531837",
+    "project_id": "emauspoars-5e369",
+    "storage_bucket": "emauspoars-5e369.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:344721284634:android:c405560e7972ea86973ba3",
+        "mobilesdk_app_id": "1:476072531837:android:845085ca3f0a0a68411e14",
         "android_client_info": {
-          "package_name": "com.ficagna.tcc2"
+          "package_name": "com.ficagna.emausPoaRs"
         }
       },
       "oauth_client": [
         {
-          "client_id": "344721284634-74dj5hqc9h3tgs9moctfj54ij4sqbqls.apps.googleusercontent.com",
+          "client_id": "476072531837-ok1qojamfissbl9bbkq02ti4aujlubpr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ficagna.emausPoaRs",
+            "certificate_hash": "dc56ded3b9258b8135635bf3a6c5d5b20d56ab14"
+          }
+        },
+        {
+          "client_id": "476072531837-or0rpg3uep5o1151ug0i471l8uhp2aea.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD49kfKbt8pudG2w49DaUTF3UO1sJ_6C-E"
+          "current_key": "AIzaSyC8UMzMJhqBsBPbimI1B2orkWfhjwoylcM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "344721284634-74dj5hqc9h3tgs9moctfj54ij4sqbqls.apps.googleusercontent.com",
+              "client_id": "476072531837-or0rpg3uep5o1151ug0i471l8uhp2aea.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
