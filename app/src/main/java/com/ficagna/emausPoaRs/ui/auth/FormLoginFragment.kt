@@ -1,28 +1,28 @@
 package com.ficagna.emausPoaRs.ui.auth
 
 
-import android.app.Activity.RESULT_OK
-import android.content.ContentValues.TAG
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ficagna.emausPoaRs.R
-import com.ficagna.emausPoaRs.helper.FirebaseHelper
 import com.ficagna.emausPoaRs.databinding.FragmentFormLoginBinding
+import com.ficagna.emausPoaRs.helper.FirebaseHelper
+import com.ficagna.emausPoaRs.ui.fragments.HomeFragment
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
@@ -32,9 +32,11 @@ class FormLoginFragment : Fragment() {
 
     private var _binding: FragmentFormLoginBinding? = null
     private val binding get() = _binding!!
-    private lateinit var googleSignInClient: GoogleSignInClient
 
+    private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,11 +53,11 @@ class FormLoginFragment : Fragment() {
         auth = Firebase.auth
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("476072531837-ok1qojamfissbl9bbkq02ti4aujlubpr.apps.googleusercontent.com")
+            .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
 
-        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+        googleSignInClient = GoogleSignIn.getClient(this.requireActivity(), gso)
 
         initClicks()
     }
@@ -120,44 +122,47 @@ class FormLoginFragment : Fragment() {
 
     private fun signIn() {
         val signInIntent = googleSignInClient.signInIntent
-        abreActivity.launch(signInIntent)
+        launcher.launch(signInIntent)
     }
 
-    var abreActivity = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { result: ActivityResult ->
+    private val launcher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
 
-        if (result.resultCode == RESULT_OK) {
-            val int = result.data
-            val task = GoogleSignIn.getSignedInAccountFromIntent(int)
-            try {
-                val conta = task.getResult(ApiException::class.java)
-                loginGoogle(conta.idToken!!)
-
-            } catch (e: ApiException) {
-
+                val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+                handleResults(task)
             }
+        }
+
+    private fun handleResults(task: Task<GoogleSignInAccount>) {
+        if (task.isSuccessful) {
+            val account: GoogleSignInAccount? = task.result
+            if (account != null) {
+                updateUI(account)
+            }
+        } else {
+            Toast.makeText(
+                requireContext(),
+                FirebaseHelper.validError(task.exception?.message ?: ""),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
-    private fun loginGoogle(token: String) {
-        val credencial = GoogleAuthProvider.getCredential(token, null)
-        auth.signInWithCredential(credencial)
-            .addOnCompleteListener(requireActivity()) { task ->
-                if (task.isSuccessful) {
-                    findNavController().navigate(R.id.action_formLoginFragment_to_homeFragment)
-                    Log.d(TAG, "signInWithCredential:success")
-
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        FirebaseHelper.validError(task.exception?.message ?: ""),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                binding.progressbar.isVisible = false
+    private fun updateUI(account: GoogleSignInAccount) {
+        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+        auth.signInWithCredential(credential).addOnCompleteListener (requireActivity()) { task ->
+            binding.progressbar.isVisible = false
+            if (task.isSuccessful) {
+                findNavController().navigate(R.id.action_formLoginFragment_to_homeFragment)
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    FirebaseHelper.validError(task.exception?.message ?: ""),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
-
+        }
     }
 
     override fun onDestroyView() {
@@ -166,7 +171,6 @@ class FormLoginFragment : Fragment() {
     }
 
 }
-
 
 
 

@@ -1,28 +1,31 @@
 package com.ficagna.emausPoaRs.ui.activitys
 
 
+import android.R
 import android.os.Bundle
+import android.support.annotation.NonNull
 import android.view.View
 import android.widget.CalendarView
+import android.widget.CalendarView.OnDateChangeListener
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.ficagna.emausPoaRs.databinding.ActivityCalendarBinding
-import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.database
 
 
 class CalendarActivity : AppCompatActivity() {
 
-    private lateinit var dateDisplay: CalendarView
-    private lateinit var eventEditText: EditText
-    private lateinit var database: DatabaseReference
-    private lateinit var stringDateSelected: String
+    private var dateDisplay: CalendarView? = null
+    private var eventEditText: EditText? = null
+    private var stringDateSelected: String? = null
+    private var databaseReference: DatabaseReference? = null
 
     private lateinit var binding: ActivityCalendarBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,32 +35,31 @@ class CalendarActivity : AppCompatActivity() {
         dateDisplay = binding.dateDisplay
         eventEditText = binding.eventEditText
 
-        dateDisplay.setOnDateChangeListener { _, year, month, dayOfMonth ->
-            stringDateSelected = "$year${month + 1}$dayOfMonth"
+        dateDisplay!!.setOnDateChangeListener(OnDateChangeListener() { dateDisplay, i, i1, i2 ->
+            stringDateSelected = i.toString() + (i1 + 1).toString() + i2.toString()
             calendarClicked()
-        }
-
-        database = Firebase.database.reference.child("atividades")
+        })
+        databaseReference = FirebaseDatabase.getInstance().getReference("calendario")
     }
 
     private fun calendarClicked() {
-
-        database.child(stringDateSelected)
+        databaseReference!!.child(stringDateSelected!!)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.value != null) {
-                        eventEditText.setText(snapshot.value.toString())
+                        eventEditText!!.setText(snapshot.value.toString())
                     } else {
-                        eventEditText.setText("")
+                        eventEditText!!.setText("null")
                     }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
                 }
             })
-
-        fun bt_save(view: View?) {
-            database.child(stringDateSelected).setValue(eventEditText.text.toString())
-        }
     }
+
+    fun btSave(view: View?) {
+        databaseReference!!.child(stringDateSelected!!).setValue(eventEditText!!.text.toString())
+    }
+
 }

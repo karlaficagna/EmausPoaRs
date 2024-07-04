@@ -11,3 +11,4 @@ data class Group(
 
     constructor() : this("", "", "", "", "", "")
 }
+

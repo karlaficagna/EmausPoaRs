@@ -15,15 +15,14 @@ class EventosListAdapter(
 ) : RecyclerView.Adapter<EventosListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
-            ItemEventosListBinding.inflate(
+        return ViewHolder(ItemEventosListBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent, false
             )
         )
     }
 
-    override fun onBindViewHolder(holder: EventosListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val eventos = eventosList[position]
 
         holder.binding.evento.text = eventos?.evento
@@ -31,7 +30,12 @@ class EventosListAdapter(
         holder.binding.horario.text = eventos?.horario
         holder.binding.local.text = eventos?.local
         eventos?.imgEvento?.let {
-
+            val resId: Int = context.resources.getIdentifier(
+                it,
+                "drawable",
+                context.packageName
+            )
+            holder.binding.imgEventos.setImageResource(resId)
         }
 
     }

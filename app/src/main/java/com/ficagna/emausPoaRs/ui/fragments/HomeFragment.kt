@@ -10,20 +10,24 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ficagna.emausPoaRs.R
 import com.ficagna.emausPoaRs.databinding.FragmentHomeBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : Fragment() {
 
+    private lateinit var auth: FirebaseAuth
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreateView(
+      override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+          auth = FirebaseAuth.getInstance()
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+
 
     }
 

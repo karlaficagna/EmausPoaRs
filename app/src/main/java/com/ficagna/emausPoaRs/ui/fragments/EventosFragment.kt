@@ -22,15 +22,15 @@ class EventosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_eventos, container, false)
-        val recyclerViewAtividades = view.findViewById<RecyclerView>(R.id.recyclerViewAtividades)
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.listEventos)
 
         FirebaseDatabase.getInstance().reference.child("database").child("eventos")
             .get().addOnSuccessListener {
                 Log.d("teste", it.toString())
-                val eventos =
-                    it.children.map { item -> item.getValue(Eventos::class.java) }.toList()
+                val eventos = it.children.map { item -> item.getValue(Eventos::class.java) }.toList()
                 Log.d("eventos", eventos.toString())
-                recyclerViewAtividades.adapter =
+                recyclerView.adapter =
                     EventosListAdapter(eventosList = eventos, context = requireContext())
 
             }

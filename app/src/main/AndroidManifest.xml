@@ -12,7 +12,7 @@
         android:roundIcon="@drawable/logo_emaus_oficial"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tcc2"
-        tools:targetApi="31">
+        tools:targetApi="34">
 
         <activity
             android:name="com.ficagna.emausPoaRs.ui.activitys.ContribuaActivity"
@@ -28,7 +28,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
@@ -41,9 +40,9 @@
                 <data android:scheme="http"/>
                 <data android:host="www.emauspoa.com.br"/>
                 <data android:scheme="https"/>
-
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.ficagna.emausPoaRs.ui.activitys.SplashActivity"
             android:exported="true">
@@ -57,5 +56,4 @@
             android:name="com.ficagna.emausPoaRs.ui.activitys.MainActivity"
             android:exported="false" />
     </application>
-
 </manifest>

@@ -42,7 +42,8 @@
     <fragment
         android:id="@+id/formLoginFragment"
         android:name="com.ficagna.emausPoaRs.ui.auth.FormLoginFragment"
-        android:label="FormLoginFragment">
+        android:label="FormLoginFragment"
+        tools:layout="@layout/fragment_form_login">
         <action
             android:id="@+id/action_formLoginFragment_to_formCadastroFragment"
             app:destination="@id/formCadastroFragment" />
@@ -66,7 +67,8 @@
     <fragment
         android:id="@+id/recoverAccountFragment"
         android:name="com.ficagna.emausPoaRs.ui.auth.RecoverAccountFragment"
-        android:label="RecoverAccountFragment">
+        android:label="RecoverAccountFragment"
+        tools:layout="@layout/fragment_recover_account">
         <action
             android:id="@+id/action_recoverAccountFragment_to_formLoginFragment"
             app:destination="@id/formLoginFragment" />
@@ -93,34 +95,14 @@
         tools:layout="@layout/fragment_noticias" />
     <fragment
         android:id="@+id/eventosFragment"
-        android:name="com.ficagna.emausPoaRs.ui.fragments.AtividadesFragment"
-        android:label="fragment_atividades_list"
+        android:name="com.ficagna.emausPoaRs.ui.fragments.EventosFragment"
+        android:label="fragment_eventos"
         tools:layout="@layout/fragment_eventos" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.ficagna.emausPoaRs.ui.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/item_perfil"
-        android:name="com.ficagna.emausPoaRs.ui.fragments.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile"/>
-    <fragment
-        android:id="@+id/item_noticias"
-        android:name="com.ficagna.emausPoaRs.ui.fragments.NoticiasFragment"
-        android:label="fragment_noticias"
-        tools:layout="@layout/fragment_noticias"/>
-    <fragment
-        android:id="@+id/item_eventos"
-        android:name="com.ficagna.emausPoaRs.ui.fragments.AtividadesFragment"
-        android:label="fragment_atividades_list"
-        tools:layout="@layout/fragment_eventos"/>
-    <fragment
-        android:id="@+id/item_home"
-        android:name="com.ficagna.emausPoaRs.ui.fragments.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
     <activity
         android:id="@+id/redesSociaisActivity"
         android:name="com.ficagna.emausPoaRs.ui.activitys.RedesSociaisActivity"

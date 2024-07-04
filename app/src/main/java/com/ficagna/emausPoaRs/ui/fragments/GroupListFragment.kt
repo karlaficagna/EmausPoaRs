@@ -23,7 +23,7 @@ class GroupListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_group_list, container, false)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewGroup)
 
         FirebaseDatabase.getInstance().reference.child("database").child("grupos")
             .get().addOnSuccessListener {

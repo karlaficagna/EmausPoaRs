@@ -19,7 +19,8 @@
                 android:id="@+id/logoGroup"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:padding="5dp"/>
+                android:padding="5dp"
+                android:src="@drawable/logo_caminho_perf"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
