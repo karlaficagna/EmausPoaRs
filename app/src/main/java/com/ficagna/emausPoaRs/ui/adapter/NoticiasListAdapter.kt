@@ -23,7 +23,7 @@ class NoticiasListAdapter(
         )
     }
 
-    override fun onBindViewHolder(holder: NoticiasListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val noticias = noticiasList[position]
 
         holder.binding.titulo.text = noticias?.titulo

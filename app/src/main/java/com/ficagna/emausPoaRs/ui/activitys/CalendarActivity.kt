@@ -35,7 +35,7 @@ class CalendarActivity : AppCompatActivity() {
         dateDisplay = binding.dateDisplay
         eventEditText = binding.eventEditText
 
-        dateDisplay!!.setOnDateChangeListener(OnDateChangeListener() { dateDisplay, i, i1, i2 ->
+        dateDisplay!!.setOnDateChangeListener(OnDateChangeListener { dateDisplay, i, i1, i2 ->
             stringDateSelected = i.toString() + (i1 + 1).toString() + i2.toString()
             calendarClicked()
         })

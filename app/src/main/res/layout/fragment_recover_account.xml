@@ -33,7 +33,7 @@
             android:id="@+id/et_email"
             style="@style/EditText"
             android:hint="email@email.com"
-            android:drawableRight="@drawable/ic_baseline_email"
+            android:drawableEnd="@drawable/ic_baseline_email"
             android:inputType="textEmailAddress"
             android:layout_marginTop="25dp"
             app:layout_constraintStart_toStartOf="@id/container_recover_account"

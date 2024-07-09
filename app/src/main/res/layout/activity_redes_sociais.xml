@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress ALL -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,12 +17,13 @@
         android:background="@color/white"
         android:padding="10dp">
 
-        <ImageView
-            android:id="@+id/bt_instagram"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/img"
-            app:srcCompat="@drawable/insta" />
+       <ImageView
+           android:id="@+id/bt_instagram"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:background="@drawable/img"
+           app:srcCompat="@drawable/insta"
+           tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/bt_instagram1"
@@ -51,7 +52,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/img"
-            app:srcCompat="@drawable/face" />
+            app:srcCompat="@drawable/face"
+            tools:ignore="MissingConstraints"/>
 
         <TextView
             android:id="@+id/bt_facebook1"
@@ -80,7 +82,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/img"
-            app:srcCompat="@drawable/youtube" />
+            app:srcCompat="@drawable/youtube"
+            tools:ignore="MissingConstraints"/>
 
         <TextView
             android:id="@+id/bt_youtube1"
@@ -108,7 +111,8 @@
             android:id="@+id/bt_homepage"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            app:srcCompat="@drawable/emaus_poa_azul" />
+            app:srcCompat="@drawable/emaus_poa_azul"
+            tools:ignore="MissingConstraints"/>
 
         <TextView
             android:id="@+id/bt_homepage1"

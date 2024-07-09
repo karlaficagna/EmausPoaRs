@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "EmauPoaRs"
 include ':app'
+

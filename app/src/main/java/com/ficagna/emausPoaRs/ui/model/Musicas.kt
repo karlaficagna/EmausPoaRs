@@ -1,13 +1,10 @@
 package com.ficagna.emausPoaRs.ui.model
 
-class Eventos (
+data class Musicas (
 
-    var evento: String,
-    var local: String,
-    var dataEvento: String,
-    var horario: String,
-    val imgEvento: String
+    var nomeMusica: String,
+    val imgMusica: String
 ){
-    constructor() : this("", "", "", "", "")
+    constructor() : this("", "")
 
 }

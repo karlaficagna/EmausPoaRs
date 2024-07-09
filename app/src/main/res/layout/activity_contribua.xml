@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress ALL -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -131,6 +131,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pixCnpj"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar" />
+    </com.google.android.material.appbar.AppBarLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -28,7 +28,6 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
 
-
     }
 
     private fun initClicks() {
@@ -62,7 +61,7 @@ class HomeFragment : Fragment() {
         }
         binding.button8.setOnClickListener {
             it.hideKeyboard()
-            findNavController().navigate(R.id.action_homeFragment_to_noticiasFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_musicasFragment)
         }
         binding.button9.setOnClickListener {
             it.hideKeyboard()
@@ -79,7 +78,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initClicks()
-
 
     }
 }

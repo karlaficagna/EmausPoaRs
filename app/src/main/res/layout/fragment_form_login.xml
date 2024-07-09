@@ -2,39 +2,42 @@
 
 <androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".ui.auth.FormLoginFragment"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@drawable/background"
+    tools:context=".ui.auth.FormLoginFragment">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background" >
+    android:id="@+id/formLoginFragment">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:layout_marginTop="76dp"
         android:src="@drawable/emaus_ofic_br"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/container_components"
         style="@style/ContainerComponents"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"/>
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
         android:id="@+id/et_email"
         style="@style/EditText"
         android:hint="nome@email.com"
-        android:drawableRight="@drawable/ic_baseline_email"
+        android:drawableEnd="@drawable/ic_baseline_email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@id/container_components"
         app:layout_constraintEnd_toEndOf="@id/container_components"
@@ -44,7 +47,7 @@
         android:id="@+id/et_senha"
         style="@style/EditText"
         android:hint="******"
-        android:drawableRight="@drawable/ic_baseline_remove_red_eye_24"
+        android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"
         android:inputType="numberPassword"
         app:layout_constraintStart_toStartOf="@id/container_components"
         app:layout_constraintEnd_toEndOf="@id/container_components"
@@ -62,13 +65,14 @@
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:indeterminateTint="@color/white"
         android:visibility="invisible"
-        tools:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_components" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_components"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/cadastro"
@@ -83,6 +87,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/progressbar" />
+
     <TextView
         android:id="@+id/esqueci_senha"
         style="@style/ProgressBar"
@@ -93,7 +98,7 @@
         android:textColor="@color/black"
         app:cardElevation="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cadastro" />
 
@@ -101,11 +106,10 @@
         android:id="@+id/bt_google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/esqueci_senha"/>
+        app:layout_constraintTop_toBottomOf="@id/esqueci_senha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

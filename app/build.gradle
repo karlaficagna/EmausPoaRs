@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.ficagna.emausPoaRs"
-        minSdk 34
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -41,6 +41,8 @@ android {
     }
 
     namespace 'com.ficagna.emausPoaRs'
+    buildToolsVersion '34.0.0'
+
 }
 
 dependencies {
@@ -50,7 +52,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.8.3'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     implementation "androidx.room:room-runtime:2.6.1"
     implementation "androidx.room:room-ktx:2.6.1"
@@ -59,13 +61,13 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:21.2.0'
 
     implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
-    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-database-ktx:21.0.0'
     implementation 'com.google.firebase:firebase-common-ktx:21.0.0'
-    implementation 'com.google.firebase:firebase-firestore'
-    implementation 'com.google.firebase:firebase-auth-ktx'
-    implementation 'com.google.firebase:firebase-database-ktx'
-    implementation 'com.google.firebase:firebase-storage-ktx'
-    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-firestore:25.0.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:23.0.0'
+    implementation 'com.google.firebase:firebase-database-ktx:21.0.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:21.0.0'
+    implementation 'com.google.firebase:firebase-analytics:22.0.2'
 
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

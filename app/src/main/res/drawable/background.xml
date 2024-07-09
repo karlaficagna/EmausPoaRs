@@ -6,13 +6,13 @@
     <solid android:color="@color/azul">
 
     </solid>
-<!--    <gradient-->
-<!--        android:startColor="@color/white"-->
-<!--        android:centerColor="@color/azul_claro"-->
-<!--        android:endColor="@color/azul"-->
-<!--        android:type="linear"-->
-<!--        android:angle="90">-->
-<!--    </gradient>-->
+    <gradient
+        android:startColor="@color/azul_claro"
+        android:centerColor="@color/azul"
+        android:endColor="@color/azul_escuro"
+        android:type="linear"
+        android:angle="90">
+    </gradient>
 
 
 </shape>

@@ -3,7 +3,6 @@ package com.ficagna.emausPoaRs.ui.auth
 
 import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +16,6 @@ import androidx.navigation.fragment.findNavController
 import com.ficagna.emausPoaRs.R
 import com.ficagna.emausPoaRs.databinding.FragmentFormLoginBinding
 import com.ficagna.emausPoaRs.helper.FirebaseHelper
-import com.ficagna.emausPoaRs.ui.fragments.HomeFragment
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -35,7 +33,6 @@ class FormLoginFragment : Fragment() {
 
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
-
 
 
     override fun onCreateView(
@@ -151,7 +148,7 @@ class FormLoginFragment : Fragment() {
 
     private fun updateUI(account: GoogleSignInAccount) {
         val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-        auth.signInWithCredential(credential).addOnCompleteListener (requireActivity()) { task ->
+        auth.signInWithCredential(credential).addOnCompleteListener(requireActivity()) { task ->
             binding.progressbar.isVisible = false
             if (task.isSuccessful) {
                 findNavController().navigate(R.id.action_formLoginFragment_to_homeFragment)
