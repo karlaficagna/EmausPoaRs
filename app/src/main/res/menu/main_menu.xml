@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/principal_menu">
+
+
+    <item
+        android:id="@+id/item_home"
+        android:title="@string/Home"
+        android:icon="@drawable/home_fill"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/item_musicas"
+        android:title="@string/Músicas"
+        android:icon="@drawable/ic_library_music"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/item_oracoes"
+        android:title="@string/Orações"
+        android:icon="@drawable/ic_item_oracoes"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/item_eventos"
+        android:title="@string/Eventos"
+        android:icon="@drawable/ic_party_white"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/item_perfil"
+        android:title="@string/Perfil"
+        android:icon="@drawable/ic_person_fill"
+        app:showAsAction="ifRoom"/>
+
+</menu>
