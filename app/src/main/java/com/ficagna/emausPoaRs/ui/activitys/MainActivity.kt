@@ -4,16 +4,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.ficagna.emausPoaRs.R
 import com.ficagna.emausPoaRs.databinding.ActivityMainBinding
-import com.ficagna.emausPoaRs.ui.fragments.EventosFragment
-import com.ficagna.emausPoaRs.ui.fragments.HomeFragment
-import com.ficagna.emausPoaRs.ui.fragments.MusicasFragment
-import com.ficagna.emausPoaRs.ui.fragments.OracoesFragment
-import com.ficagna.emausPoaRs.ui.fragments.ProfileFragment
+import com.ficagna.emausPoaRs.ui.fragments.CalendarFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -47,22 +43,27 @@ class MainActivity : AppCompatActivity() {
                 navController.navigate(R.id.homeFragment)
                 true
             }
+
             R.id.item_musicas -> {
                 navController.navigate(R.id.musicasFragment)
                 true
             }
+
             R.id.item_oracoes -> {
                 navController.navigate(R.id.oracoesFragment)
                 true
             }
+
             R.id.item_eventos -> {
                 navController.navigate(R.id.eventosFragment)
                 true
             }
+
             R.id.item_perfil -> {
                 navController.navigate(R.id.profileFragment)
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
 
