@@ -19,11 +19,11 @@
             android:id="@+id/action_homeFragment_to_redesSociaisActivity"
             app:destination="@id/redesSociaisActivity" />
         <action
-            android:id="@+id/action_homeFragment_to_calendarActivity"
-            app:destination="@id/calendarActivity" />
+            android:id="@+id/action_homeFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
         <action
             android:id="@+id/action_homeFragment_to_contribuaActivity"
-            app:destination="@id/contribuaActivity" />
+            app:destination="@id/contribuaFragment" />
         <action
             android:id="@+id/action_homeFragment_to_productFragment"
             app:destination="@id/productFragment" />
@@ -100,18 +100,18 @@
         android:id="@+id/profileFragment"
         android:name="com.ficagna.emausPoaRs.ui.fragments.ProfileFragment"
         tools:layout="@layout/fragment_profile" />
-    <activity
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.ficagna.emausPoaRs.ui.fragments.CalendarFragment"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/contribuaFragment"
+        android:name="com.ficagna.emausPoaRs.ui.fragments.ContribuaFragment"
+        tools:layout="@layout/fragment_contribua" />
+    <fragment
         android:id="@+id/redesSociaisActivity"
-        android:name="com.ficagna.emausPoaRs.ui.activitys.RedesSociaisActivity"
-        tools:layout="@layout/activity_redes_sociais" />
-    <activity
-        android:id="@+id/calendarActivity"
-        android:name="com.ficagna.emausPoaRs.ui.activitys.CalendarActivity"
-        tools:layout="@layout/activity_calendar" />
-    <activity
-        android:id="@+id/contribuaActivity"
-        android:name="com.ficagna.emausPoaRs.ui.activitys.ContribuaActivity"
-        tools:layout="@layout/activity_contribua" />
+        android:name="com.ficagna.emausPoaRs.ui.fragments.RedesSociaisFragment"
+        tools:layout="@layout/fragment_redes_sociais" />
     <activity
         android:id="@+id/splashActivity"
         android:name="com.ficagna.emausPoaRs.ui.activitys.SplashActivity"

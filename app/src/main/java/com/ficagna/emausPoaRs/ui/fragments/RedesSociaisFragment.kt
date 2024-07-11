@@ -1,24 +1,33 @@
-package com.ficagna.emausPoaRs.ui.activitys
+package com.ficagna.emausPoaRs.ui.fragments
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import com.ficagna.emausPoaRs.databinding.ActivityRedesSociaisBinding
+import androidx.fragment.app.Fragment
+import com.ficagna.emausPoaRs.databinding.FragmentRedesSociaisBinding
 
 
-class RedesSociaisActivity : AppCompatActivity() {
+class RedesSociaisFragment : Fragment() {
 
-    private lateinit var binding: ActivityRedesSociaisBinding
+    private var _binding: FragmentRedesSociaisBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityRedesSociaisBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        getLinks()
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentRedesSociaisBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        getLinks()
+    }
     private fun getLinks() {
         binding.btInstagram.setOnClickListener {
             startActivity(
@@ -44,8 +53,6 @@ class RedesSociaisActivity : AppCompatActivity() {
                 )
             )
         }
-
-
         binding.btFacebook1.setOnClickListener {
             startActivity(
                 Intent(
@@ -54,7 +61,6 @@ class RedesSociaisActivity : AppCompatActivity() {
                 )
             )
         }
-
         binding.btYoutube.setOnClickListener {
             startActivity(
                 Intent(
@@ -63,7 +69,6 @@ class RedesSociaisActivity : AppCompatActivity() {
                 )
             )
         }
-
         binding.btYoutube1.setOnClickListener {
             startActivity(
                 Intent(
@@ -72,7 +77,6 @@ class RedesSociaisActivity : AppCompatActivity() {
                 )
             )
         }
-
         binding.btHomepage.setOnClickListener {
             startActivity(
                 Intent(
@@ -81,7 +85,6 @@ class RedesSociaisActivity : AppCompatActivity() {
                 )
             )
         }
-
         binding.btHomepage1.setOnClickListener {
             startActivity(
                 Intent(
@@ -90,7 +93,10 @@ class RedesSociaisActivity : AppCompatActivity() {
                 )
             )
         }
-
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

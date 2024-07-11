@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
         }
         binding.button2.setOnClickListener {
             it.hideKeyboard()
-            findNavController().navigate(R.id.action_homeFragment_to_calendarActivity)
+            findNavController().navigate(R.id.action_homeFragment_to_calendarFragment)
         }
         binding.button3.setOnClickListener {
             it.hideKeyboard()

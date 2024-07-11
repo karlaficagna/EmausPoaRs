@@ -1,22 +1,32 @@
-package com.ficagna.emausPoaRs.ui.activitys
+package com.ficagna.emausPoaRs.ui.fragments
 
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
-import com.ficagna.emausPoaRs.databinding.ActivityFormCalendarBinding
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.ficagna.emausPoaRs.databinding.FragmentFormCalendarBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlin.to
 
-class FormCalendarActivity : AppCompatActivity() {
+class FormCalendarFragment : Fragment() {
 
-    private lateinit var binding: ActivityFormCalendarBinding
+    private var _binding: FragmentFormCalendarBinding? = null
+    private val binding get() = _binding!!
     private val saveDb = FirebaseFirestore.getInstance()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityFormCalendarBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentFormCalendarBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         binding.btSave.setOnClickListener {
             val eventosMap = hashMapOf(
@@ -27,11 +37,19 @@ class FormCalendarActivity : AppCompatActivity() {
             )
 
             saveDb.collection("Eventos").document("Marantha ed Natal")
-                .set(eventosMap).addOnCompleteListener {
+                .set(eventosMap)
+                .addOnCompleteListener {
                     Log.d("saveDb", "Evento cadastrado com sucesso!")
-                }.addOnFailureListener { }
-
+                }
+                .addOnFailureListener {
+                    Log.e("saveDb", "Falha ao cadastrar evento", it)
+                }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
 

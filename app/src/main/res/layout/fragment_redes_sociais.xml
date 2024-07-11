@@ -8,8 +8,7 @@
     android:background="@drawable/background"
     android:orientation="vertical"
     android:padding="32dp"
-    tools:context=".ui.activitys.RedesSociaisActivity">
-
+    tools:context=".ui.fragments.RedesSociaisFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -130,7 +129,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </LinearLayout>
 
 
